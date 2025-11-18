@@ -6,7 +6,8 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 // const Article = require('./Models/article');
 
-app.use('/articles', require('./Routes/articleRouter'));
+app.use('/api/v1/articles', require('./Routes/articleRouter'));
+
 // Connect to MongoDB
 connectDB(process.env.MONGODB_URI)
   .then(() => {
